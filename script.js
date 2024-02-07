@@ -1,19 +1,28 @@
 "use strict";
 
+/*
+var url = "https://api.github.com/repos/lyreonn/showcase/contents/assets/showcase/";
+(async () => {
+    const response = await fetch(url);
+    const jsondata = await response.json();
+    writeplaylist(jsondata);
+})()
+*/
+
+var tracks = [];
+
 window.onload = function () {
     var playlist = document.getElementById("playlist");
-    var tracks = new Array();
-    for (var n = 0; n < 10; n++) {
+    fetch("./filelist.json")
+        .then((response) => response.json())
+        .then((jsondata) => writeplaylist(jsondata));
+}
+
+function writeplaylist(jsondata) {
+    for (var n = 0; n < jsondata.length; n++) {
         tracks[n] = document.createElement("div");
         tracks[n].className = "tracks";
-        tracks[n].innerHTML = n;
+        tracks[n].innerHTML = jsondata[n].name;
         playlist.appendChild(tracks[n]);
     }
-
-    (async () => {
-        const response = await fetch('https://api.github.com/repos/lyreonn/showcase/contents/');
-        const data = await response.json();
-        console.log(data);
-    })()
-
 }
