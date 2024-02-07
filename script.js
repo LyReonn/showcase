@@ -1,10 +1,6 @@
 "use strict";
 
 window.onload = function () {
-    var fs = require('fs');
-    var files = fs.readdirSync("./media/");
-    console.log(files[0]);
-
     var playlist = document.getElementById("playlist");
     var tracks = new Array();
     for (var n = 0; n < 5; n++) {
@@ -13,4 +9,8 @@ window.onload = function () {
         tracks[n].innerHTML = n;
         playlist.appendChild(tracks[n]);
     }
+
+    $.getJSON('./media', data => {
+        console.log(data);
+    });
 }
