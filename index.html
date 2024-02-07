@@ -1,38 +1,22 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width;" />
-	<title>李海清-声音设计师-简历-作品集</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel=stylesheet href="style.css">
+    <script src="script.js"></script>
+    <title>李海清-简历&作品集</title>
 </head>
 
-<body style="font-size:18px; font-family:Courier;">
-	<a href="https://linkedin.com/in/LyReonn" target="_blank">LinkedIn</a> |
-	<a href="https://github.com/LyReonn" target="_blank">GitHub</a> |
-	<a href="mailto:LyReonn@icloud.com">E-Mail</a> |
-	<a href="tel:+8618017305475">Call</a>
-	<hr>
-	Music Design: Neo Soul Demo
-	<br>
-	<audio controls>
-		<source src="音乐设计-Neo-Soul-Demo.mp3" type="audio/mp3">
-	</audio>
-	<hr>
-	Music Design: 电子管弦-泰坦陨落
-	<br>
-	<audio controls>
-		<source src="音乐设计-电子管弦-泰坦陨落.mp3" type="audio/mp3">
-	</audio>
-	<hr>
-	Audio Design: 双生幻想
-	<br>
-	<video width="100%" height="auto" controls>
-		<source src="音乐音效设计-双生幻想.mp4" type="video/mp4">
-	</video>
-	<object data="【简历2023】李海清-声音设计师.pdf" type="application/pdf" style="height: 100% !important; width: 100% !important;">
-		<a href="【简历2023】李海清-声音设计师.pdf">Download Resume</a>
-	</object>
+<body>
+    <div id="showcase">
+        <video id="player" height="360" width="640" controls autoplay>
+            <source src="./media/Jingle设计-欢迎回家.mp3">
+        </video>
+        <div id="playlist"></div>
+    </div>
 </body>
 
 </html>

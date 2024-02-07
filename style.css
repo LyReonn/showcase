@@ -1,0 +1,18 @@
+body {
+    font-family: Verdana;
+    font-size: 18px;
+}
+
+.tracks {
+    color: black;
+    background: grey;
+    outline: 2px solid black;
+
+    width: 400px;
+    height: 50px;
+
+    line-height: 50px;
+
+    float: top;
+    z-index: 0;
+}
