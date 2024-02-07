@@ -4,12 +4,17 @@ body {
     background-color: black;
 }
 
+video {
+    width: 100%;
+    height: auto;
+}
+
 .tracks {
     color: black;
     background: grey;
     outline: 2px solid black;
 
-    width: 400px;
+    width: 100%;
     height: 50px;
 
     line-height: 50px;
