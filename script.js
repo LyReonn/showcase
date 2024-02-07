@@ -13,7 +13,7 @@ window.onload = function () {
 }
 
 $(document).ready(function () {
-    $.get("./media", function (allFiles) {
+    $.get(".", function (allFiles) {
         $("#fileNames").append(allFiles);
         console.log(allFiles);
     });
