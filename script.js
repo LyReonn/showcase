@@ -27,7 +27,7 @@ window.onload = function () {
 function writeplaylist(jsondata) {
     for (var n = 0; n < jsondata.length; n++) {
         tracks[n] = document.createElement("div");
-        tracks[n].innerHTML = jsondata[n].name;
+        tracks[n].innerHTML = "▶︎ " + jsondata[n].name;
         tracks[n].className = "tracks";
         tracks[n].setAttribute("id", n);
         tracks[n].addEventListener("click", changeplaying);
